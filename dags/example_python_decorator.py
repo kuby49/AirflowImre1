@@ -35,9 +35,9 @@ from airflow.operators.python import (
     is_venv_installed,
 )
 
-[docs]log = logging.getLogger(__name__)
+log = logging.getLogger(__name__)
 
-[docs]PATH_TO_PYTHON_BINARY = sys.executable
+PATH_TO_PYTHON_BINARY = sys.executable
 
 
 with DAG(

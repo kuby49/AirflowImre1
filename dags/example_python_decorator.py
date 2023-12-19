@@ -33,7 +33,7 @@ from airflow.operators.python import (
     ExternalPythonOperator,
     PythonOperator,
     PythonVirtualenvOperator,
-    is_venv_installed,
+#    is_venv_installed,
 )
 
 log = logging.getLogger(__name__)

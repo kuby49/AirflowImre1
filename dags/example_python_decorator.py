@@ -1,3 +1,4 @@
+#
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
 # distributed with this work for additional information
@@ -14,7 +15,7 @@
 # KIND, either express or implied.  See the License for the
 # specific language governing permissions and limitations
 # under the License.
-""" 
+"""
 Example DAG demonstrating the usage of the classic Python operators to execute Python functions natively and
 within a virtual environment.
 """
@@ -35,20 +36,20 @@ from airflow.operators.python import (
     is_venv_installed,
 )
 
-log = logging.getLogger(__name__)
+[docs]log = logging.getLogger(__name__)
 
-PATH_TO_PYTHON_BINARY = sys.executable
+[docs]PATH_TO_PYTHON_BINARY = sys.executable
 
 
 with DAG(
     dag_id="example_python_operator",
     schedule=None,
-    start_date=pendulum.datetime(2021, 1, 1, tz="UTC"), 
+    start_date=pendulum.datetime(2021, 1, 1, tz="UTC"),
     catchup=False,
     tags=["example"],
 ):
     # [START howto_operator_python]
-    def print_context(ds=None, **kwargs):
+[docs]    def print_context(ds=None, **kwargs):
         """Print the Airflow context and ds variable from the context."""
         pprint(kwargs)
         print(ds)

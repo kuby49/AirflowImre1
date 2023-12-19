@@ -48,7 +48,7 @@ with DAG(
     tags=["example"],
 ):
     # [START howto_operator_python]
-[docs]    def print_context(ds=None, **kwargs):
+    def print_context(ds=None, **kwargs):
         """Print the Airflow context and ds variable from the context."""
         pprint(kwargs)
         print(ds)

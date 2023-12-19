@@ -36,9 +36,9 @@ from airflow.operators.python import (
     is_venv_installed,
 )
 
-[docs]log = logging.getLogger(__name__)
+log = logging.getLogger(__name__)
 
-[docs]PATH_TO_PYTHON_BINARY = sys.executable
+PATH_TO_PYTHON_BINARY = sys.executable
 
 
 with DAG(
@@ -49,7 +49,7 @@ with DAG(
     tags=["example"],
 ):
     # [START howto_operator_python]
-[docs]    def print_context(ds=None, **kwargs):
+    def print_context(ds=None, **kwargs):
         """Print the Airflow context and ds variable from the context."""
         pprint(kwargs)
         print(ds)

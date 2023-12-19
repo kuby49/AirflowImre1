@@ -84,7 +84,8 @@ with DAG(
         run_this >> log_the_sql >> sleeping_task
     # [END howto_operator_python_kwargs]
 
-    if not is_venv_installed():
+#    if not is_venv_installed():
+    if not True:
         log.warning("The virtalenv_python example task requires virtualenv, please install it.")
     else:
         # [START howto_operator_python_venv]
